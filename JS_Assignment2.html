@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>JavaScript Assignment2</title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+		
+		var inputq=prompt("Please enter the current date in the format MM/DD/YYYY", "MM"+"/"+"DD"+"/"+"YYYY");
+
+		var inputq=new Date(inputq);
+		var newYears=new Date(inputq.getFullYear()+1, 00, 01);
+
+		if(newYears.getMonth()==inputq.getMonth() && newYears.getDate()==inputq.getDate()){
+			alert("0 days left until New Years!");
+		}else{
+			alert(Math.floor((newYears.getTime()-inputq.getTime())/(1000*60*60*24))+ " days left until New Years!");
+		}
+		</script>
+	</body>
+</html>
